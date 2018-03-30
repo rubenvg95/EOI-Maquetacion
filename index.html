@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-reboot.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/slider.css">
+    <title>TheFox by RVG</title>
+    <!-- Iconos extraidos de https://www.flaticon.com/search?word=skype -->
+</head>
+
+<body>
+    <script src="js/jssor.slider-27.1.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jssor_1_slider_init = function () {
+
+            var jssor_1_SlideoTransitions = [
+                [{ b: -1, d: 1, o: -0.7 }],
+                [{ b: 900, d: 2000, x: -379, e: { x: 7 } }],
+                [{ b: 900, d: 2000, x: -379, e: { x: 7 } }],
+                [{ b: -1, d: 1, o: -1, sX: 2, sY: 2 }, { b: 0, d: 900, x: -171, y: -341, o: 1, sX: -2, sY: -2, e: { x: 3, y: 3, sX: 3, sY: 3 } }, { b: 900, d: 1600, x: -283, o: -1, e: { x: 16 } }]
+            ];
+
+            var jssor_1_options = {
+                $AutoPlay: 1,
+                $SlideDuration: 800,
+                $SlideEasing: $Jease$.$OutQuint,
+                $CaptionSliderOptions: {
+                    $Class: $JssorCaptionSlideo$,
+                    $Transitions: jssor_1_SlideoTransitions
+                },
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$
+                }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 3000;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <header class="grid">
+        <nav class="grid-contentview">
+            <ul class="menu">
+                <li>
+                    <a href="index.html" class="main--logo">
+                        <img src="/images/logo.png" alt="logo de la empresa">
+                        <h1 class="logo--title">The
+                            <strong>Fox</strong>
+                        </h1>
+                    </a>
+                </li>
+                <li>
+                    <a class="pageSite" href="#">home</a>
+                </li>
+                <li>
+                    <a class="pageSite" href="#">page</a>
+                </li>
+                <li>
+                    <a class="pageSite" href="#">portfolio</a>
+                </li>
+                <li>
+                    <a class="pageSite" href="#">blog</a>
+                </li>
+                <li>
+                    <a class="pageSite" href="#">shop</a>
+                </li>
+                <li>
+                    <a class="pageSite" href="#">travel</a>
+                </li>
+                <li>
+                    <a class="pageSite" href="#">shortcodes</a>
+                </li>
+                <li>
+                    <a class="pageSite" href="#">features</a>
+                </li>
+                <li>
+                    <a class="pageSite" href="#">contact</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/lupa.png" alt="Buscar">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/cesta.png" alt="Comprar">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <figure class="grid-fullview main-picture">
+            <img class="photo-file" src="images/main_photo.jpg" alt="foto principal">
+        </figure>
+    </header>
+    <main class="grid">
+        <section class="grid-contentview">
+            <div class="grid--aboutUs">
+                <div class="welcome">
+                    <div class="welcome--title dark">Hello!</div>
+                    <div class="welcome--text">
+                        <p>Welcome to ThemeForest! Read our Getting Started Guide, visit the Blog for recent news and make yourself
+                            at home! You can find information about ThemeForest in our Knowledgebase.</p>
+                        <p>
+                            <span class="welcome--bold dark">WordPress Drag & Drop Page Themes</span>
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet est non massa aliquet dictum
+                            eget eu sem. Cras ornare quam et lorem luctus, et dapibus lectus porttitor. Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit. Suspendisse potenti. Mauris luctus imperdiet purus vel
+                            bibendum. Phasellus ultrices hendrerit mauris nec gravida.</p>
+                    </div>
+                    <button id="viewDetail">VIEW DETAIL</button>
+                </div>
+                <div class="services dark">
+                    <div class="service--item dark">Web Design Service
+                        <span class="service--item--extender">&#x2BC6;</span>
+                    </div>
+                    <div class="service--item"> Creative Service
+                        <span class="service--item--extender">&#x2BC5;</span>
+                    </div>
+                    <div class="service--item extended">
+                        <div class="service--box"></div>
+                        <div class="service--item--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie erat at nisl volutpat pulvinar.
+                            Sed in egestas dolor. Maecenas vestibulum dignissim dictum. Donec ipsum quam, sagittis et sem
+                            vel, volutpat tempor mi. Aliquam consectetur justo dui. Sed in egestas dolor.</div>
+                    </div>
+                    <div class="service--item">SEO Solutions Service
+                        <span class="service--item--extender">&#x2BC6;</span>
+                    </div>
+                    <div class="service--item">Graphic Design Service
+                        <span class="service--item--extender">&#x2BC6;</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="grid-contentview">
+            <div class="grid--simpleWorks">
+                <div class="simpleWorks--title dark">Amazing Works</div>
+                <div class="simpleWork">
+                    <div class="simpleWork--title dark">
+                        Awesome Work Title Here
+                        <span class="simpleWork--title--rate">34 ♡ </span>
+                    </div>
+                </div>
+                <div class="simpleWork">
+                    <div class="simpleWork--title dark">
+                        Awesome Work Title Here
+                        <span class="simpleWork--title--rate">646 ♡ </span>
+                    </div>
+                </div>
+                <div class="simpleWork">
+                    <div class="simpleWork--title dark">
+                        Awesome Work Title Here
+                        <span class="simpleWork--title--rate">12 ♡ </span>
+                    </div>
+                </div>
+                <div class="simpleWork">
+                    <div class="simpleWork--title dark">
+                        Awesome Work Title Here
+                        <span class="simpleWork--title--rate">76 ♡ </span>
+                    </div>
+                </div>
+                <div class="simpleWork">
+                    <div class="simpleWork--title dark">
+                        Awesome Work Title Here
+                        <span class="simpleWork--title--rate">57 ♡ </span>
+                    </div>
+                </div>
+                <div class="simpleWork">
+                    <div class="simpleWork--title dark">
+                        Awesome Work Title Here
+                        <span class="simpleWork--title--rate">02 ♡ </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="grid-contentview">
+            <div class="grid--whyWorks">
+                <div class="whyworks--text">
+                    <div class="whyworks--text--mainTitle dark">
+                        Why Work With Us
+                    </div>
+                    <div class="whyworks--text--text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae veritatis cum ipsum, ratione nisi
+                            facere nesciunt suscipit perferendis ullam commodi quia harum modi maxime pariatur voluptatibus
+                            ipsam corporis illo porro.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nemo quasi, fuga ipsum nulla tempora
+                            ducimus, autem impedit vero consequuntur minima reiciendis labore unde omnis voluptatum placeat
+                            asperiores quam necessitatibus.</p>
+                    </div>
+                    <button id="viewDetail">View Detail</button>
+                </div>
+                <div class="whyworks--image">
+                    <figure>
+                        <img class="photo-file" src="/images/tablet.png" alt="foto de una tablet">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <div class="grid-fullview">
+            <div class="grid-statistics">
+                <div class="statistic">
+                    <div class="statistic--textArea">
+                        <div class="statistic--mainText">
+                            28,3940
+                        </div>
+                        <div class="statistic--subText">
+                            purchases
+                        </div>
+                    </div>
+                </div>
+                <div class="statistic">
+                    <div class="statistic--textArea">
+                        <div class="statistic--mainText">
+                            345,789
+                        </div>
+                        <div class="statistic--subText">
+                            subscribers
+                        </div>
+                    </div>
+                </div>
+                <div class="statistic">
+                    <div class="statistic--textArea">
+                        <div class="statistic--mainText">
+                            696+
+                        </div>
+                        <div class="statistic--subText">
+                            features added
+                        </div>
+                    </div>
+                </div>
+                <div class="statistic">
+                    <div class="statistic--textArea">
+                        <div class="statistic--mainText">
+                            1,273,890
+                        </div>
+                        <div class="statistic--subText">
+                            customers
+                        </div>
+                    </div>
+                </div>
+                <div class="statistic">
+                    <div class="statistic--textArea">
+                        <div class="statistic--mainText">
+                            3,637
+                        </div>
+                        <div class="statistic--subText">
+                            comments
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <section class="grid-contentview">
+            <div class="grid--testimonials">
+                <div class="testimonial--firstRow">
+                    <div class="testimonial--elements dark">
+                        <div class="testimonials-title">
+                            What Other Say About TheFox
+                        </div>
+                        <div class="navigator--testimonials">
+                            <a href=""> &lt;  Previous</a>
+                            <a href="">Next  &gt;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-photo">
+                    </div>
+                    <div class="testimonial-data">
+                        <div class="testimonial-name dark">Ruben</div>
+                        <div class="testimonial-job">Teleco</div>
+                        <div class="testimonial-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus cooluptatibus incidunt necessit</div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-photo">
+                    </div>
+                    <div class="testimonial-data">
+                        <div class="testimonial-name">Ruben</div>
+                        <div class="testimonial-job">Teleco</div>
+                        <div class="testimonial-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus cooluptatibus incidunt necessit</div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-photo">
+                    </div>
+                    <div class="testimonial-data">
+                        <div class="testimonial-name">Ruben</div>
+                        <div class="testimonial-job">Teleco</div>
+                        <div class="testimonial-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus cooluptatibus incidunt necessit</div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-photo">
+                    </div>
+                    <div class="testimonial-data">
+                        <div class="testimonial-name">Ruben</div>
+                        <div class="testimonial-job">Teleco</div>
+                        <div class="testimonial-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus cooluptatibus incidunt necessit</div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <div class="grid-contentview">
+            <div class="grid--brands">
+                <figure class="brand">
+                    <img src="images/telenor.png" alt="">
+                </figure>
+                <figure class="brand">
+                    <img src="images/nice.png" alt="">
+                </figure>
+                <figure class="brand">
+                    <img src="images/plate.png" alt="">
+                </figure>
+                <figure class="brand">
+                    <img src="images/brilliant.png" alt="">
+                </figure>
+                <figure class="brand">
+                    <img src="images/microsoft.png" alt="">
+                </figure>
+                <figure class="brand">
+                    <img src="images/color_media.png" alt="">
+                </figure>
+            </div>
+        </div>
+        <div class="grid-fullview">
+            <div id="map">
+                Aqui va el mapa
+            </div>
+        </div>
+        <section class="grid-contentview">
+            <div class="grid--contact">
+                <div class="contact-data">
+                    <div class="titleContact dark">
+                        TheFox Design
+                    </div>
+                    <div class="contact-social">
+                        <a href="#">
+                            <img src="images/social/facebook.png" alt="facebook">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/twitter.png" alt="twitter">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/rss.png" alt="rss">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/gplus.png" alt="google plus">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/flickr.png" alt="flickr">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/globo.png" alt="globo">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/linkedin.png" alt="linkedin">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/pinteres.png" alt="pinteres">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/skype.png" alt="skype">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/vimeo.png" alt="vimeo">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/tumblur.png" alt="tumblur">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/insta.png" alt="instagram">
+                        </a>
+                    </div>
+                    <div class="data">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel nesciunt illum voluptatibus architecto
+                            labore hic soluta suscipit? Eos aliquam repellendus exercitationem sapiente sint sunt, tempora,
+                            repudiandae eveniet sequi placeat eaque.</p>
+                        <p>qwerty 12., 57</p>
+                        <p>qwerty 12., 57</p>
+                        <p>qwerty 12., 57</p>
+                        <p>qwerty 12., 57</p>
+                        <p>qwerty 12., 57</p>
+                        <p>qwerty 12., 57</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <input type="text" name="fname" placeholder="Name*">
+                    <input type="email" name="email" placeholder="Email*">
+                    <input type='tel' name="phoneNumber" placeholder="Phone number">
+                    <textarea name="textContact" cols="40" rows="6"></textarea>
+                    <button id="submitContact">submit now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="grid-fullview">
+        <div class="grid--news">
+            <div class="news">
+                <div class="news-container">
+                    <div class="news-text">standar blog title here</div>
+                    <div class="news-subText">27 July 2014 | Category</div>
+                </div>
+            </div>
+            <div class="news">
+                <div class="news-container">
+                    <div class="news-text">standar blog title here</div>
+                    <div class="news-subText">27 July 2014 | Category</div>
+                </div>
+            </div>
+            <div class="news">
+                <div class="news-container">
+                    <div class="news-text">standar blog title here</div>
+                    <div class="news-subText">27 July 2014 | Category</div>
+                </div>
+            </div>
+            <div class="news">
+                <div class="news-container">
+                    <div class="news-text">standar blog title here</div>
+                    <div class="news-subText">27 July 2014 | Category</div>
+                </div>
+            </div>
+            <div class="news">
+                <div class="news-container">
+                    <div class="news-text">standar blog title here</div>
+                    <div class="news-subText">27 July 2014 | Category</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid-fullview">
+        <div class="purchaseNow">
+            <div class="purchaseNoow-container">
+                <div class="purchaseNow-text">get stronger for your work</div>
+                <div class="purchaseNow-subText">TheFox is One of The Themeforest's Selling PSD Theme of All Time</div>
+                <button class="btn-purchase">purchase now</button>
+            </div>
+        </div>
+    </div>
+    <footer class="grid">
+        <div class="grid-contentview ">
+            <div class="grid-footer">
+                <div class="footer-content">
+                    <div>
+                        <div class="nameCompany">the
+                            <span class="company-name">fox</span>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur maiores aut, dolores eligendi
+                            officiis iste perferendis! Nesciunt ab dolor rem, velit impedit earum saepe adipisci doloremque
+                            aliquam quibusdam quis error?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui saepe, voluptas rem quasi cupiditate
+                            quo sit sed deleniti error rerum aliquam repellendus itaque molestias eius, nisi accusantium,
+                            sapiente dolor consectetur.</p>
+                    </div>
+                </div>
+                <div class="footer-content">
+                    <div class="recent--post">
+                        <div class="recent-title">recent post</div>
+                        <ul class="recentpost--item">
+                            <li>blog slideshow post
+                                <span class="date">03 Jul</span>
+                            </li>
+                            <li>standar port
+                                <span class="date">27 May</span>
+                            </li>
+                            <li>video post with quote type
+                                <span class="date">23 May</span>
+                            </li>
+                            <li>text post only type
+                                <span class="date">15 Apr</span>
+                            </li>
+                            <li>awesome post title here
+                                <span class="date">04 Mar</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content">
+                    <div class="recent--post">
+                        <div class="recent-title">recent tweets</div>
+                        <ul class="recentpost--item">
+                            <li>
+                                <img src="images/social/twitter_circular.png" alt="logo twitter">
+                                <div class="tweet">
+                                    <p>Just updated my new site.</p>
+                                    <p>@samisbister @wjndheo</p>
+                                    <p class="timeTweet">35 minutes ago</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/social/twitter_circular.png" alt="logo twitter">
+                                <div class="tweet">
+                                    <p>Hey everybody! Adelfox Update WP version. 356 Core Features Addes. Check it now!
+                                        <span class="company-name">http://t.co/38655....</span>
+                                    </p>
+                                    <p>@samisbister @wjndheo</p>
+                                    <p class="timeTweet">35 minutes ago</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content">
+                    <div class="recent--post">
+                        <div id="featuredWork" class="recent-title">featured works</div>
+                        <div class="grid-featuredWork">
+                            <div class="work"></div>
+                            <div class="work"></div>
+                            <div class="work"></div>
+                            <div class="work"></div>
+                            <div class="work"></div>
+                            <div class="work"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="grid-fullview footer-bottom">
+            <div class="grid">
+                <div class="grid-contentview footer-bottom-container">
+                    <div class="footer-bottom-text"> Copyright 2014
+                        <span class="company-name">TheFox</span> Theme by Tran Mau Tri Tam
+                        <span class="dark">|</span> All Rights Reserved
+                        <span class="dark">|</span> Powered by WordPress</div>
+                    <div class="footer-bottom-social">
+                        <a href="#">
+                            <img src="images/social/facebook.png" alt="facebook">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/twitter.png" alt="twitter">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/tumblur.png" alt="tumblur">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/vimeo.png" alt="vimeo">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/linkedin.png" alt="linkedin">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/globo.png" alt="globo">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/insta.png" alt="instagram">
+                        </a>
+                        <a href="#">
+                            <img src="images/social/rss.png" alt="rss">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 28.106198, lng: -15.445961 },
+                zoom: 8
+            });
+        }
+    </script>
+    <script type="text/javascript">jssor_1_slider_init();</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrRVGy22e7ifvabaO9bR0o8U5MQ7MSYRY&callback=initMap" async
+        defer></script>
+</body>
+
+</html>
